@@ -1,9 +1,9 @@
-import {userInteraction, getRandomInt} from '../index.js';
+import { userInteraction, getRandomInt } from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const brainEven = () => {
-  userInteraction('brainEven', description)
+  userInteraction('brainEven', 'yesNo', description);
 };
 
 const getDataEven = () => {
@@ -11,18 +11,18 @@ const getDataEven = () => {
   let correctAnswer = '';
   let even = false;
 
-    num = getRandomInt(1, 101);
-    even = num % 2 === 0;
-    switch (even) {
-      case true:
-        correctAnswer = 'yes'
-        break;
-      case false:
-        correctAnswer = 'no'
-        break;
-      default:
-        console.log( `Unknown value: '${even}'!`);
-    }
+  num = getRandomInt(1, 101);
+  even = num % 2 === 0;
+  switch (even) {
+    case true:
+      correctAnswer = 'yes';
+      break;
+    case false:
+      correctAnswer = 'no';
+      break;
+    default:
+      console.log(`Unknown value: '${even}'!`);
+  }
   return [num, correctAnswer];
 };
 
